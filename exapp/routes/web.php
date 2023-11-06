@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,10 @@ Route::get('/saluvista/{nom?}', function ($nom="") {
 Route::get('/salunormal/{nom?}/{ape?}', function (string $nom, $ape="") {
     return 'Te saludo '.$nom.' '.$ape;
 })->where(['nom' => '[a-z]+', 'ape' => '[a-z]+']);
+
+//SALUDO CONTROLADOR
+
+Route::get('/saludocontrol/{nombre?}', [Controller::class, 'pruebaController']);
 
 //CALCULADORA - SUMA
 Route::get('/sum/{num1}/{num2}', function ($num1,$num2) {

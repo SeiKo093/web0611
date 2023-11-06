@@ -9,4 +9,11 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+    public function pruebaController($nom)
+    {
+        //$this->nom=$nombre;
+
+        return view('saludoPLantilla',['nom' => $nom]);
+    }
 }
