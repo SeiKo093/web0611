@@ -45,6 +45,6 @@ Route::get('/div/{num1}/{num2}', function ($num1,$num2) {
 })->where(['num1' => '[0-9]+', 'num2' => '[0-9]+']);
 
 //MULTIPLICACION
-Route::get('/multi{num1}/{num2}', function ($num1,$num2) {
+Route::get('/multi/{num1}/{num2}', function ($num1,$num2) {
     return $num1. ' * '.$num2. ' es = '.$num1 * $num2;
 })->where(['num1' => '[0-9]+', 'num2' => '[0-9]+']);
