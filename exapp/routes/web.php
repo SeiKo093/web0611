@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\carController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,11 @@ use App\Http\Controllers\Controller;
 |
 */
 
+
+
+//CARROS prueba
+Route::get('/cartest',[carController::class, 'index']);
+Route::get('/cartest/{id}', [carController::class, 'show']);
 
 //BASE
 Route::get('/', function () {
